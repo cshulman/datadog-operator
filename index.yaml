@@ -1,0 +1,55 @@
+apiVersion: v1
+entries:
+  datadog-crds:
+  - apiVersion: v1
+    appVersion: "1"
+    created: "2022-08-12T12:18:41.456666682-04:00"
+    description: Datadog Kubernetes CRDs chart
+    digest: 0cf133cba586ad0c31c7f548aa7fd5129cb63fcd8e126cfdae40821dc463ec4a
+    home: https://www.datadoghq.com
+    icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+    keywords:
+    - monitoring
+    - alerting
+    - metric
+    maintainers:
+    - email: support@datadoghq.com
+      name: Datadog
+    name: datadog-crds
+    sources:
+    - https://app.datadoghq.com/account/settings#agent/kubernetes
+    - https://github.com/DataDog/datadog-operator
+    - https://docs.datadoghq.com/agent/cluster_agent/external_metrics
+    urls:
+    - https://cshulman.github.io/datadog-operator/datadog-crds-0.5.1.tgz
+    version: 0.5.1
+  datadog-operator:
+  - apiVersion: v2
+    appVersion: 0.8.0
+    created: "2022-08-12T12:18:41.467688109-04:00"
+    dependencies:
+    - condition: installCRDs
+      name: datadog-crds
+      repository: https://helm.datadoghq.com
+      tags:
+      - install-crds
+      version: =0.5.1
+    description: Datadog Operator
+    digest: dcc45f408e862f8f9586ee4f292614f4ff3ab2039f17f1d6d4c800416d98852d
+    home: https://www.datadoghq.com
+    icon: https://datadog-live.imgix.net/img/dd_logo_70x75.png
+    keywords:
+    - monitoring
+    - alerting
+    - metric
+    maintainers:
+    - email: support@datadoghq.com
+      name: Datadog
+    name: datadog-operator
+    sources:
+    - https://app.datadoghq.com/account/settings#agent/kubernetes
+    - https://github.com/DataDog/datadog-agent
+    urls:
+    - https://cshulman.github.io/datadog-operator/datadog-operator-0.8.1.tgz
+    version: 0.8.1
+generated: "2022-08-12T12:18:41.385145816-04:00"
